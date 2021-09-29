@@ -1,0 +1,17 @@
+{
+  "name": "GomokuSchool",
+  "short_name": "GomokuSchool",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icons/GomokuSchoolIcon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }, {
+      "src": "icons/GomokuSchoolIcon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+openssl genrsa -aes256 -out rootCA.key 2048
+openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 365 -out rootCA.crt
+openssl genrsa -out server.key 2048
+openssl req -nodes -new -sha256 -newkey rsa:2048 -keyout server.key -out server.csr
+openssl x509 -req -extfile server.ext -days 365 -CA rootCA.crt -CAcreateserial -CAkey rootCA.key -in server.csr -out server.crt -sha256
+
+password: abcde12345
